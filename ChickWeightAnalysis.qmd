@@ -76,9 +76,38 @@ ggplot(averaged_chicks, aes(x = Time, y = weight, color = Diet, group = Diet)) +
 
 ```
 
+```{r}
+#| layout-ncol: 2
+#| layout-nrow: 2
+
+
+for (diet in 1:4){
+  chicks_level <- chicks[chicks[,"Diet"] == diet,]
+  plot(
+    main = paste("Diet" , as.character(diet)),
+    x = chicks_level$Time,
+    y = chicks_level$weight,
+    col = diet,
+    pch = 14 + diet,
+    type = "b",
+    lty = 6,
+    lwd = 1,
+    bty = "n",
+    ylim = c(0,450),
+    xlab = "weight",
+    ylab = "days after birth"
+    
+  )
+}
+```
+
+Example citing: @wickham2017r
+
 # Code appendix
 
 ```{r ref.label=knitr::all_labels(), echo = T, eval = F}
 ```
 
 # References
+
+:::{#refs}

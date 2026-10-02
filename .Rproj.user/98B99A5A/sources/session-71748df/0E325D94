@@ -3,7 +3,7 @@
     "path": "~/Desktop/Academic/github-projects/workshop-1c-literate-programming/analysis-of-chickweight/ChickWeightAnalysis.qmd",
     "project_path": "ChickWeightAnalysis.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "2558098050",
     "contents": "",
     "dirty": false,
     "created": 1790934414794.0,
@@ -12,17 +12,17 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "68,23",
-        "scrollLine": "43",
+        "cursorPosition": "91,13",
+        "scrollLine": "80",
         "last_setup_crc32": "71748df5d80be6",
         "quartoPreviewFormat": "pdf"
     },
     "folds": "",
-    "lastKnownWriteTime": 1790947991,
+    "lastKnownWriteTime": 1790950159,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1790947991833,
+    "last_content_update": 1790950159983,
     "read_only": false,
     "read_only_alternatives": []
 }
