@@ -40,8 +40,10 @@ library(rmarkdown)
 library(knitr)
 library(kableExtra)
 library(magrittr)
+library(ggplot2)
 # Put any library imports and other preamble here.
 ```
+
 
 ## Introduction
 
@@ -61,11 +63,20 @@ kable(head(chicks))
 @tbl-chicks give example data entries from the ChickWeight dataset.
 
 
+```{r echo = FALSE}
+averaged_chicks <- aggregate(weight ~ Diet + Time , data = chicks, FUN = mean)
+
+#| label: average-chicks-plot
+ggplot(averaged_chicks, aes(x = Time, y = weight, color = Diet, group = Diet)) + 
+  geom_point() +
+  geom_line() + 
+  labs(title = "Weight by time",
+       caption = "Weight by time, averaged over all chicks given the same diet type")
+
+
+```
+
 # Code appendix
-
-Rather than re-paste all the code to the appendix, here is a trick which makes the markdown file output all the code (without) execution in the appendix, without any duplication.
-
-Please keep in mind to format the code so that the entire code is clearly visible and does not run into the margins of the pdf version.
 
 ```{r ref.label=knitr::all_labels(), echo = T, eval = F}
 ```

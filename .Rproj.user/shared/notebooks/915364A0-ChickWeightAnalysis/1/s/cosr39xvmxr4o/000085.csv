@@ -1,0 +1,8 @@
+"0","averaged_chicks <- aggregate(weight ~ Diet + Time , data = chicks, FUN = mean)"
+"0",""
+"0","#| label: average-chicks-plot"
+"0","ggplot(averaged_chicks, aes(x = Time, y = weight, color = Diet, group = Diet)) + "
+"0","  geom_point() +"
+"0","  geom_line() + "
+"0","  labs(title = ""Weight by time"","
+"0","       caption = ""Weight by time, averaged over all chicks given the same diet type"")"
