@@ -1,0 +1,73 @@
+---
+title: "Analysis of the ChickWeight dataset"
+subtitle: 'MSc in Statistics 2026/27, Imperial College London, Data Science Workshop 1c'
+author: "Sai Han Myo Htet"
+format:
+  html:
+    toc: true
+    highlight: tango
+    self-contained: true
+    df-print: paged
+  pdf: default
+format-links: false
+bibliography: "chickWeight.bib" 
+---
+
+```{=html}
+<style type="text/css">
+h1{
+  font-size: 24pt;
+}
+h2{
+  font-size: 18pt;
+}
+body{
+  font-size: 12pt;
+}
+</style>
+```
+
+```{r setup, include = FALSE, tidy=TRUE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+include_solutions <- TRUE
+```
+
+```{r setup2, include=FALSE, tidy=TRUE}
+library(rmarkdown)
+library(knitr)
+library(kableExtra)
+library(magrittr)
+# Put any library imports and other preamble here.
+```
+
+## Introduction
+
+```{r echo = FALSE}
+
+chicks <- ChickWeight
+```
+
+In this report, we perform a rudimentary analysis of the built-in ChickWeight Dataset in R. 
+
+```{r echo = FALSE}
+#| label: tbl-chicks
+#| tbl-cap: "Example rows of the ChickWeight Dataset."
+kable(head(chicks))
+```
+
+@tbl-chicks give example data entries from the ChickWeight dataset.
+
+
+# Code appendix
+
+Rather than re-paste all the code to the appendix, here is a trick which makes the markdown file output all the code (without) execution in the appendix, without any duplication.
+
+Please keep in mind to format the code so that the entire code is clearly visible and does not run into the margins of the pdf version.
+
+```{r ref.label=knitr::all_labels(), echo = T, eval = F}
+```
+
+# References
